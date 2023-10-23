@@ -24,6 +24,7 @@ namespace ControleAlmoxarifadoAPI
                 );
 
             builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
 
             var app = builder.Build();
 

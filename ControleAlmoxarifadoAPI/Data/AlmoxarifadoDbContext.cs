@@ -12,11 +12,12 @@ namespace ControleAlmoxarifadoAPI.Data
         }
 
         public DbSet<UsuarioModel> Usuarios { get; set; }
+        public DbSet<CategoriaModel> Categorias { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new UsuarioMap());
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfiguration(new CategoriaMap());
         }
     }
 }
